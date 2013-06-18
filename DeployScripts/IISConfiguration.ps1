@@ -73,7 +73,7 @@ function GetNextSiteId {
 
 function CreateSite($siteName, $siteRoot, $appPoolName, $port) {
     $port = GetIfNull $port 80
-    GuardAgainstNull $siteName "siteName mest be set"
+    GuardAgainstNull $siteName "siteName must be set"
     GuardAgainstNull $siteRoot "siteRoot must be set"
     GuardAgainstNull $appPoolName "appPoolName must be set when creating a site"
     if(WebSiteExists $siteName) {
